@@ -1,63 +1,179 @@
-#investment {
-  display: table;
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  flex-direction: column;
+
+}
+
+header {
+  position: relative;
   width: 100%;
+  background-color:gray;
+  text-align: center; /* Center items vertically */
+  overflow: hidden; /* Clear the floats inside the header */
 }
 
-#left {
-  width: 70%;
-  display: table-cell;
-  vertical-align: middle;
+img {
+  max-width: 100px;
+  height: auto;
+  width: auto;
+  border-radius: 50%;
+  margin-right: auto; /* Add some space between the image and the table */
 }
 
-.slide {
-  display: table;
+/*
+.myImage{
+  top: 10px;
+  left: 10%;
+  max-width: 100px;
+  height: auto;
+  border-radius: 40%;
+}
+*/
+.headerLinks{
+  color: white;
 }
 
-#right {
-  position: relative;
-  width: 30%;
-  display: table-cell;
-  vertical-align: middle;
+table {
+  margin: auto;
+  width: auto;
+  background-color: gray;
+  color: white;
+  border-collapse: collapse; /* Improve table borders */
+}
+/*
+table {
+  margin-left: 500px;
+  transform: translateX(-50%);
+  border-collapse: collapse;
+  width: 50%;
+  background-color: gray;
+  color: white;
+}
+*/
+
+th, td {
+  padding: 1px; /* Add padding for cell content */
+  vertical-align: top;
+  background-color: gray;
+/*  border: 1px solid white; *//* Add borders for cells */
+}
+/*
+th, td {
+  text-align: left;
+  vertical-align:text-top;
+  background-color: gray;
+}
+*/
+td.centerSideTable{
+  text-align: center;
+}
+td.leftSideTable{
+  text-align: right;
+  width: 45%;
+  margin: 4px;
 }
 
-#right img {
-  max-width: 100%;
+td.rightSideTable{
+  text-align: left;
+  width: auto;
+  margin: 4px;
 }
 
-.imageBlock {
-  position: relative;
-  display: table-cell;
+th {
+  background-color:gray;
 }
 
-.imageBlock p {
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin:0;
+.toggle-label {
+  cursor: pointer;
+  display: inline-block;
+  top: 1px;
 }
 
-.imageBlock:hover p {
-  opacity: 1;
+.toggle-label input {
+  display: none;
 }
 
-#right #top-layer {
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: table-cell;
-  vertical-align: middle;
+.toggle-label:before {
+  content: '';
 }
 
-#right:hover #top-layer {
-  position: absolute;
-  opacity: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: table-cell;
-  vertical-align: middle;
+.toggle-label input:checked + h2:before {
+  content: '\2212';
+}
+
+.toggle-label input:checked + h2 + p {
+  display: block;
+}
+
+h2 + p {
+  display: none;
+}
+
+h2 + h2 {
+  margin-top: 10px;
+}
+
+.toggle-label input:checked + h4:before {
+  content: '\2212';
+}
+
+.toggle-label input:checked + h4 + p {
+  display: block;
+}
+
+h4 + p {
+  display: none;
+}
+/* Resize when press text between strong*/
+strong + strong {
+  margin-top: 10px; /* Adjust the value as needed */
+}
+
+.toggle-label input:checked + strong:before {
+  content: '\2212';
+}
+
+.toggle-label input:checked + strong + p {
+  display: block;
+}
+
+strong + p {
+  display: none;
+}
+
+/* Resize when press text between li*/
+
+li + p{
+  display: none;
+}
+li + li {
+  margin-top: 10px; /* Adjust the value as needed */
+}
+
+.toggle-label input:checked + li:before {
+  content: '\2212';
+}
+
+.toggle-label input:checked + li + p {
+  display: block;
+}
+
+
+
+strong.Space{
+  margin-left: 10px;
+}
+
+p.paragraphSpace{
+  margin-left: 20px;
+}
+
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+  table {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
 }
