@@ -18,8 +18,8 @@ header {
 
 h1, h2, h3{
   margin-left: 5px; /* Adjust the margin as needed */
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 h1{
@@ -160,8 +160,12 @@ p.paragraphSpace{
 
 /* Styles for screens with a maximum width of 600px (e.g., mobile devices) */
 @media screen and (max-width: 600px) {
+  h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
