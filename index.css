@@ -16,12 +16,6 @@ header {
   overflow: hidden; /* Clear the floats inside the header */
 }
 
-h1, h2, h3{
-  margin-left: 5px; /* Adjust the margin as needed */
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
 h1{
   margin-top: 20px;
   font-size:large;
@@ -70,6 +64,7 @@ th, td {
 td.centerSideTable{
   text-align: center;
 }
+
 td.leftSideTable{
 
   text-align: right;
@@ -92,9 +87,7 @@ th {
 }
 
 div {
-/*  font-size: 18px; /* Adjust the font size as needed */*/
-  margin-top: 10px; /* Adjust spacing between div elements */
-  display: inline-block; /* Display div elements inline */
+  display: inline-block;
 }
 
 div + p {
@@ -113,18 +106,16 @@ div + p {
 
 .toggle-label:before {
   content: '\002B';
-/*  font-size: 20px;*/
   margin-left: 15px;
   display: inline-block; /* Ensure + sign is inline with the text */
 }
 
 div + div {
-  margin-top: 10px;
+  margin-top: 1px;
 }
 
 .toggle-label input:checked + .doubleSpace:before {
   content: '';
-/*  font-size: 20px;*/
 }
 
 
@@ -138,9 +129,8 @@ div + div {
 
 .doubleSpace{
   margin-left: 10px;
-/*  font-size: 18px; /* Adjust the font size as needed */
-  margin-top: 10px; /* Adjust spacing between div elements */
-  display: inline-block; /* Display as inline-block to keep + on the same line */
+  margin-top: 1px;
+  display: inline-block;
   font-weight: bold;
 }
 
@@ -154,19 +144,7 @@ p.paragraphSpace{
 }
 
 .headline{
-/*  font-size: 20px;*/
   margin-left: 10px;
-}
-
-/* Styles for screens with a maximum width of 600px (e.g., mobile devices) */
-@media screen and (max-width: 600px) {
-  h2{
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  body {
-    font-size: 10px;
-  }
 }
 
 /* Styles for screens with a minimum width of 601px and a maximum width of 1024px (e.g., tablets) */
@@ -182,10 +160,17 @@ p.paragraphSpace{
     font-size: 20px;
   }
 }
-/* Media query for responsiveness */
+
+/* Styles for screens with a maximum width of 600px (e.g., mobile devices) */
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 10px;
+  }
+  h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   table {
-    text
     width: 90%; /* Adjust the width for smaller screens */
   }
 }
