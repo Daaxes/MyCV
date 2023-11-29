@@ -30,7 +30,9 @@ h1{
 h2{
   font-size: medium;
   font-weight: 500;
-  margin-left: 1px; /* Adjust the margin as needed */
+  margin-left: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 h3{
@@ -159,7 +161,7 @@ p.paragraphSpace{
 /* Styles for screens with a maximum width of 600px (e.g., mobile devices) */
 @media screen and (max-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
