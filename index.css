@@ -135,7 +135,7 @@ div + div {
 
 .doubleSpace{
   margin-left: 10px;
-/*  font-size: 18px; /* Adjust the font size as needed */*/
+/*  font-size: 18px; /* Adjust the font size as needed */
   margin-top: 10px; /* Adjust spacing between div elements */
   display: inline-block; /* Display as inline-block to keep + on the same line */
   font-weight: bold;
@@ -176,7 +176,6 @@ p.paragraphSpace{
 }
 /* Media query for responsiveness */
 @media screen and (max-width: 600px) {
-  font-size: ;
   table {
     width: 90%; /* Adjust the width for smaller screens */
   }
