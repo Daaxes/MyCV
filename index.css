@@ -1,4 +1,5 @@
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   display: flex;
@@ -14,6 +15,13 @@ header {
   overflow: hidden; /* Clear the floats inside the header */
 }
 
+h1, h2, h3{
+  margin-left: 5px; /* Adjust the margin as needed */
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+
 img {
   max-width: 100px;
   height: auto;
@@ -22,15 +30,6 @@ img {
   margin-right: auto; /* Add some space between the image and the table */
 }
 
-/*
-.myImage{
-  top: 10px;
-  left: 10%;
-  max-width: 100px;
-  height: auto;
-  border-radius: 40%;
-}
-*/
 .headerLinks{
   color: white;
 }
@@ -41,35 +40,21 @@ table {
   background-color: gray;
   color: white;
   border-collapse: collapse; /* Improve table borders */
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
-/*
-table {
-  margin-left: 500px;
-  transform: translateX(-50%);
-  border-collapse: collapse;
-  width: 50%;
-  background-color: gray;
-  color: white;
-}
-*/
 
 th, td {
-  padding: 1px; /* Add padding for cell content */
+  padding: 1px;
   vertical-align: top;
   background-color: gray;
-/*  border: 1px solid white; *//* Add borders for cells */
 }
-/*
-th, td {
-  text-align: left;
-  vertical-align:text-top;
-  background-color: gray;
-}
-*/
+
 td.centerSideTable{
   text-align: center;
 }
 td.leftSideTable{
+
   text-align: right;
   width: 45%;
   margin: 4px;
@@ -81,14 +66,28 @@ td.rightSideTable{
   margin: 4px;
 }
 
+td.lastTableSpaceDown{
+  margin-bottom: 10px;
+}
+
 th {
   background-color:gray;
+}
+
+div {
+  font-size: 18px; /* Adjust the font size as needed */
+  margin-top: 10px; /* Adjust spacing between div elements */
+  display: inline-block; /* Display div elements inline */
+}
+
+div + p {
+  display: none;
 }
 
 .toggle-label {
   cursor: pointer;
   display: inline-block;
-  top: 1px;
+  top: 10px;
 }
 
 .toggle-label input {
@@ -96,80 +95,50 @@ th {
 }
 
 .toggle-label:before {
-  content: '';
+  content: '\002B';
+  font-size: 20px;
+  margin-left: 15px;
+  display: inline-block; /* Ensure + sign is inline with the text */
 }
 
-.toggle-label input:checked + h2:before {
-  content: '\2212';
-}
-
-.toggle-label input:checked + h2 + p {
-  display: block;
-}
-
-h2 + p {
-  display: none;
-}
-
-h2 + h2 {
+div + div {
   margin-top: 10px;
 }
 
-.toggle-label input:checked + h4:before {
-  content: '\2212';
+.toggle-label input:checked + .doubleSpace:before {
+  content: '';
+  font-size: 20px;
 }
 
-.toggle-label input:checked + h4 + p {
+
+.toggle-label input:checked + div + p {
   display: block;
 }
 
-h4 + p {
-  display: none;
-}
-/* Resize when press text between strong*/
-strong + strong {
-  margin-top: 10px; /* Adjust the value as needed */
+.Space{
+  margin-left: 30px;
 }
 
-.toggle-label input:checked + strong:before {
-  content: '\2212';
-}
-
-.toggle-label input:checked + strong + p {
-  display: block;
-}
-
-strong + p {
-  display: none;
-}
-
-/* Resize when press text between li*/
-
-li + p{
-  display: none;
-}
-li + li {
-  margin-top: 10px; /* Adjust the value as needed */
-}
-
-.toggle-label input:checked + li:before {
-  content: '\2212';
-}
-
-.toggle-label input:checked + li + p {
-  display: block;
-}
-
-
-
-strong.Space{
+.doubleSpace{
   margin-left: 10px;
+  font-size: 18px; /* Adjust the font size as needed */
+  margin-top: 10px; /* Adjust spacing between div elements */
+  display: inline-block; /* Display as inline-block to keep + on the same line */
+  font-weight: bold;
+}
+
+.trippleSpace{
+  margin-left: 40px;
 }
 
 p.paragraphSpace{
-  margin-left: 20px;
+  margin-left: 42px;
 }
 
+.headline{
+  font-size: 20px;
+  margin-left: 10px;
+}
 
 /* Media query for responsiveness */
 @media screen and (max-width: 600px) {
