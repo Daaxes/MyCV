@@ -68,7 +68,7 @@ td.centerSideTable{
 
 td.leftSideTable{
 
-  text-align: right;
+  text-align: left;
   width: 45%;
   margin: 4px;
 }
@@ -165,7 +165,7 @@ p.paragraphSpace{
 /* Styles for screens with a maximum width of 600px (e.g., mobile devices) */
 @media screen and (max-width: 600px) {
   body {
-    font-size: 10px;
+    font-size: 8px;
   }
   h2{
     margin-top: 5px;
