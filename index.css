@@ -35,6 +35,7 @@ h3{
 
 
 img {
+  position: fixed;
   max-width: 150px;
   height: auto;
   width: auto;
@@ -43,7 +44,7 @@ img {
 }
 
 .myImage2{
-  position:relative;
+  position:fixed;
   left: 0px;
   margin-top: 20px;
   margin-left: 10px;
@@ -155,6 +156,11 @@ div + div {
 p.paragraphSpace{
   margin-left: 42px;
   font-size: small;
+}
+
+.firstheadline{
+  margin-top: 200px;
+  margin-left: 10px;
 }
 
 .headline{
